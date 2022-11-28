@@ -5,23 +5,27 @@ import numpy as np
 
 #Reading img
 
-img =cv.imread('fotos/Perro01.jpeg')
-cv.imshow('perro',img)
+img =cv.imread('fotos/Perro01.jpeg') #leer imagen
+cv.imshow('perro',img) #muestra la imagen
 
 def rescaleFrame(frame,scale=0.5):
-    width=int(frame.shape[1]*scale)
+    """Cambiar tamaño"""
+    width=int (frame.shape[1] * scale)
     height=int(frame.shape[0]*scale)
 
     dimensions=(width,height)
 
     return cv.resize(frame,dimensions,interpolation=cv.INTER_AREA)
+ 
+"""def changeRes(width,height): #ver captura de video en vivo
+    capture.set(3,width)
+    capture.set(4,height)
+"""
 
-cv.waitKey(0)
-
-resized_image=rescaleFrame('Perro2.jpeg',0.2)
+resized_image=rescaleFrame(img,0.2)
 
 cv.imshow('Resized',resized_image)
 
-cv.wait(0)
+cv.waitKey(0)
 
 
