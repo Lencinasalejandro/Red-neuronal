@@ -1,9 +1,7 @@
-#prueba https://www.youtube.com/watch?v=oXlwWbU8l2o
-
 import cv2 as cv
 
 def rescaleFrame(frame,scale=0.5):
-    """Cambiar tamaño sirve para imagenes, video y captura de video en vivo"""
+    #Cambiar tamaño sirve para imagenes, video y captura de video en vivo
     width=int (frame.shape[1] * scale)
     height=int(frame.shape[0]*scale)
 

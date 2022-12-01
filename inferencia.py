@@ -1,8 +1,8 @@
 
 # Importamos librerias
-import torch
 import cv2
 import numpy as np
+#import torch
 
 # Leemos el modelo
 model = torch.hub.load('ultralytics/yolov5', 'custom',
